@@ -1,7 +1,7 @@
 ultimate deliverable will include
 1. A live demo of your robot, under a controller you wrote and tuned, performing a cartesian
 task (for example, picking and placing from the table with the gripper). The expectation is
-that your controller will implement cartesian stiffness and damping controller. Dr. Thomas
+that your controller will implement cartesian stiffness and damping controller. professor
 will provide code that institutes an external force in X, and the robot will be expected to
 deflect only in X if the decoupling is correct. You are encouraged to interact with your robot
 as part of the demo (in a safe way).
