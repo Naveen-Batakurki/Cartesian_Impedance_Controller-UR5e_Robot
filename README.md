@@ -96,10 +96,11 @@ Gains are selected to satisfy **critical damping** (`ζ = 1`):
 
 ```
 MEEN612_Final_Project_Naveen_Batakurki/
-│
-├── my_controller.py        # Core Cartesian impedance controller class
-├── run_simulator.py        # Normal mode simulation runner (no bias force)
-├── hardmode_sim.py         # Hard mode simulation runner (bias force in X)
+├──Code                        # all the code requred for the project 
+|  ├── python                  # all the other supporting code to run the simulation is in this file 
+|  ├── my_controller.py        # Core Cartesian impedance controller class
+|  ├── run_simulator.py        # Normal mode simulation runner (no bias force)
+|  ├── hardmode_sim.py         # Hard mode simulation runner (bias force in X)
 │
 ├── Run_simulation/         # Output figures and screen recording – normal mode
 │   ├── Figure_1.png        # End-effector XY path
