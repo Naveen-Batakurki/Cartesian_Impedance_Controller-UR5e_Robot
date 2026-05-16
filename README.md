@@ -1,4 +1,4 @@
-Your ultimate deliverable will include
+ultimate deliverable will include
 1. A live demo of your robot, under a controller you wrote and tuned, performing a cartesian
 task (for example, picking and placing from the table with the gripper). The expectation is
 that your controller will implement cartesian stiffness and damping controller. Dr. Thomas
