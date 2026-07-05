@@ -1,27 +1,4 @@
-ultimate deliverable will include
-1. A live demo of your robot, under a controller you wrote and tuned, performing a cartesian
-task (for example, picking and placing from the table with the gripper). The expectation is
-that your controller will implement cartesian stiffness and damping controller. professor
-will provide code that institutes an external force in X, and the robot will be expected to
-deflect only in X if the decoupling is correct. You are encouraged to interact with your robot
-as part of the demo (in a safe way).
-2. A pdf report comprising
-(a) A description of your controller and controller design process, featuring a time-domain
-plot of a critically-damped step response in the simulator.
-3. A zip file containing
-(a) A simulation video of your robot tracing a trajectory in cartesian space.
-(b) A simulation video of your robot tracing a trajectory in cartesian space but
-experiencing a bias force, that results in the robot’s deviation in only the direction of
-the bias force
-(c) Your code, which should be able to reproduce all your videos, your plots, and your live
-demo
-----------------------------------//-----------------//------------------------------------------------------
-   Here's a detailed README for your project:
-
----
-
-```markdown
-# MEEN 612 – Cartesian Impedance Controller for UR5e (Drake)
+# Cartesian Impedance Controller for UR5e (Drake)
 
 A Python implementation of a Cartesian impedance controller for the Universal Robots UR5e
 manipulator, simulated using Drake. The controller commands joint torques to track a smooth
@@ -95,9 +72,9 @@ Gains are selected to satisfy **critical damping** (`ζ = 1`):
 ## Repository Structure
 
 ```
-MEEN612_Final_Project_Naveen_Batakurki/
-├──Code                        # all the code requred for the project 
-|  ├── python                  # all the other supporting code to run the simulation is in this file 
+Cartesian_Impedance_Controller/
+├── Code                        # all the code required for the project
+|  ├── python                  # supporting code to run the simulation
 |  ├── my_controller.py        # Core Cartesian impedance controller class
 |  ├── run_simulator.py        # Normal mode simulation runner (no bias force)
 |  ├── hardmode_sim.py         # Hard mode simulation runner (bias force in X)
@@ -109,7 +86,7 @@ MEEN612_Final_Project_Naveen_Batakurki/
 │   ├── Figure_3.png        # Joint torque commands vs time
 │   ├── Figure_4.png        # Joint positions vs time
 │   ├── Figure_5.png        # Joint velocities vs time
-│   └── Screen Recording 2... .mp4
+│   └── screen_recording.mp4
 │
 ├── Hardmode_sim/           # Output figures and screen recording – hard mode
 │   ├── Figure_1.png
@@ -118,7 +95,7 @@ MEEN612_Final_Project_Naveen_Batakurki/
 │   ├── Figure_3.png
 │   ├── Figure_4.png
 │   ├── Figure_5.png
-│   └── Screen Recording 2... .mp4
+│   └── screen_recording.mp4
 │
 └── README.md
 ```
@@ -189,15 +166,3 @@ self.xdot_filt = self.alpha * xdot_raw + (1.0 - self.alpha) * self.xdot_filt
 # Startup ramp
 ramp = min(time_now / self.ramp_time, 1.0)
 ```
-
----
-
-## Course Information
-
-**Course:** MEEN 408/612 – Robot Mechanics and Control  
-**Student:** Naveen Batakurki  
-**UIN:** 537001208  
-**Institution:** Texas A&M University
-```
-
----
